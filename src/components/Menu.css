@@ -1,0 +1,13 @@
+.menu {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 16px;
+    right: 16px;
+}
+
+.menu a {
+    padding: 20px;
+    text-decoration: none;
+    color: #ffffff;
+}
