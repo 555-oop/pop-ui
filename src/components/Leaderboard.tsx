@@ -27,7 +27,7 @@ function Leaderboard() {
                             sx={{'&:last-child td, &:last-child th': {border: 0}}}
                         >
                             <TableCell component="th" scope="row">{index+1}</TableCell>
-                            <TableCell>{row.name}</TableCell>
+                            <TableCell>{decodeURIComponent(row.name)}</TableCell>
                             <TableCell>{row.clicked}</TableCell>
                         </TableRow>
                     ))}

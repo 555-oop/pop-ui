@@ -7,15 +7,15 @@ function getAxiosInstance() {
 }
 
 export function newPlayer(name: string): Response<Player> {
-    return getAxiosInstance().post(`/player`, name);
+    return getAxiosInstance().post(`/player`, encodeURIComponent(name));
 }
 
 export function getPlayer(name: string): Response<Player> {
-    return getAxiosInstance().get(`/player/${name}`);
+    return getAxiosInstance().get(`/player/${encodeURIComponent(name)}`);
 }
 
 export function playerClick(name: string): Response<Player> {
-    return getAxiosInstance().put(`/player/${name}`);
+    return getAxiosInstance().put(`/player/${encodeURIComponent(name)}`);
 }
 
 export function getLeaderboard(): Response<Player[]> {

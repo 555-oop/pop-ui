@@ -17,7 +17,7 @@ function Profile() {
     }, []);
     return <div className="profile" style={{display: player ? '' : 'none'}}>
         <h1>Profile</h1>
-        <h2>Your name: {player?.name}</h2>
+        <h2>Your name: {decodeURIComponent(player?.name || '')}</h2>
         <h3>Have clicked: {player?.clicked}</h3>
         <Alert severity="error" style={{display: error ? '' : 'none'}}>{error?.name}: {error?.message}</Alert>
     </div>
